@@ -1,0 +1,11 @@
+<body>
+    
+    <form (ngSubmit)="ModifyContact(conn)">
+        <h4>Enter Name:</h4> 
+        <input type="text" id="table" [(ngModel)]=conn.contactName name="first"/> {{conn.contactName}}<br /> 
+        <h4>Enter Number :</h4> 
+        <input type="Phonenumber" id="table" [(ngModel)]=conn.contactNumber [ngModelOptions]="{standalone: true}"/>   {{conn.contactNumber}}<br /><br>
+        <button type="submit">Modify</button>
+      </form>
+</body>
+<router-outlet></router-outlet>

@@ -1,0 +1,15 @@
+<body>
+    
+  <form (ngSubmit)="addContacts()">
+  <br>
+
+      <div id="boxes">
+   <p><b>Enter Name:</b> <p><input id="name" type="text" name="t1" [(ngModel)]=conn.contactName /> {{conn.contactName}} 
+    <p><b>Enter Number :</b><p><input type="phonenumber" name="t2" [(ngModel)]=conn.contactNumber /> {{conn.contactNumber}}
+    
+      <button type="submit">Add</button>
+      
+    </div>
+    </form>
+</body>
+<router-outlet></router-outlet>

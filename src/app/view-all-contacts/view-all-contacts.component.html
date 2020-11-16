@@ -1,0 +1,12 @@
+
+  <body>
+    <table  id = "table" cellpadding ="10" cellspacing="10"*ngIf="data" >
+        <tr *ngFor="let contact of data">
+          <td>{{contact.contactName}}</td>
+          <td>{{contact.contactNumber}}</td> 
+          <td>{{contact.contactid}}</td> 
+          <td><button routerLink="/modify" id="table">Modify</button></td>
+          <td><button (click)="deleteContact(contact.contactName)">Delete</button></td>
+        </tr>
+      </table>
+    </body>

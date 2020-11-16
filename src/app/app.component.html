@@ -1,0 +1,33 @@
+
+ 
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+  <h1><i class="fa fa-address-book" aria-hidden="true"></i>Contact Book </h1>
+<div id ="header">
+  <button><a routerLink="/allcontacts">Contacts<span style='font-size:20px;'>&#9742;</span></a></button>
+  <button><a routerLink="/addContacts">+Add Contacts<span style='font-size:20px;'>&#9742;</span></a></button>
+  
+  
+</div>
+<div>
+<form (ngSubmit)="getContact()">
+  <div id="searchform">
+  <input type="text" name="t1" placeholder="Search for contacts" [(ngModel)]= "conn.contactName">
+  <button  id="search"type="submit">Search</button>
+
+  <table  id = "table" cellpadding ="10" cellspacing="10"*ngIf="data" >
+    <tr>
+      <td>{{conn.contactName}}</td>
+      <td>{{conn.contactNumber}}</td> 
+      <!-- <td>{{conn.id}}</td>  -->
+      </tr>
+    </table>
+  </div>
+
+</form>
+</div>
+
+</body> 
+<router-outlet></router-outlet>
